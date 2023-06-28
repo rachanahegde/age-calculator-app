@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="main.css">
+  <title> Age Calculator App</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <!-- Input birth date -->
+        <div class="main-inputs"> 
+          <div class="individual-input">
+            <p>Day</p>
+            <input type=text name='day' placeholder="DD" class="birth-data">
+          </div>
+          <div class="individual-input">
+            <p>Month</p>
+            <input type=text name='month' placeholder="MM" class="birth-data">
+          </div>
+          <div class="individual-input">
+            <p>Year</p>
+            <input type=text name='year' placeholder="YYYY" class="birth-data">
+          </div>
+        </div>
+        <div class="divider">
+          <hr>
+          <div id="down-arrow" >
+            <img src="/assets/images/icon-arrow.svg" alt="">
+          </div>   
+        </div>   
+      <!-- Display age based on inputted date -->
+      <div class="results-container">
+        <div class="individual-result">
+          <h1 class="results-number"> - - </h1> 
+          <h1 class="results-text"> years</h1>
+        </div>
+        <div class="individual-result">
+          <h1 class="results-number"> - - </h1> 
+          <h1 class="results-text"> months</h1>
+        </div>
+        <div class="individual-result">
+          <h1 class="results-number"> - - </h1> 
+          <h1 class="results-text"> days</h1>
+        </div>
+      </div>
+    </div>
+  </main>
+    <script src="script.js"></script>
+</body>
+</html>
