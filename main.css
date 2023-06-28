@@ -24,6 +24,10 @@ body {
     height: 100vh;
 }
 
+img {
+    width: 50%;
+}
+
 .container {
     background-color: hsl(0, 0%, 100%);
     width: 500px;
@@ -56,7 +60,7 @@ hr {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap; /* Allow content to wrap onto multiple lines */
-    justify-content: left; /* Center content horizontally */
+    justify-content: left;
 }
 
 .birth-data {
@@ -89,10 +93,6 @@ hr {
     cursor: pointer;
 }
 
-img {
-    width: 50%;
-}
-
 /* Display Age Section */
 
 .results-container {
@@ -111,5 +111,32 @@ img {
     padding-right: 10px;
 }
 
-
 /* Media Queries */
+@media all and (max-width: 520px) {
+    h1 {
+        font-size: 50px;
+    }
+    
+    .container {
+        width: 300px;
+        height: 450px;
+        border-bottom-right-radius: 100px;
+    }
+
+    hr {
+        width: 270px;
+    }
+
+    .main-inputs {
+        column-gap: 2px;
+    }
+
+    .birth-data {
+        width: 55px;
+        font-size: 17px;
+    }
+
+    #down-arrow {
+        position: absolute;
+    }
+}
