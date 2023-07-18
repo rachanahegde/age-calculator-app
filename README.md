@@ -1,14 +1,7 @@
-# Frontend Mentor - Age calculator app
+# Age Calculator App
 
-![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
+Further improvements I would like to make in the future: additional validation, work on the CSS so that my version is closer to the design (the reason my solution turned out the way it did is that I based it on UI screenshots rather than design files)
 
-## Welcome! 👋
-
-Thanks for checking out this front-end coding challenge.
-
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
-
-**To do this challenge, you need a decent understanding of HTML, CSS and JavaScript.**
 
 ## The challenge
 
