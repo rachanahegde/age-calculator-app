@@ -125,5 +125,6 @@ function displayAge() {
   }
 }
 
+// TODO Finish reviewing the code explanations
 // TODO Check that the UI looks good with error messages displayed for phone + tablet screen sizes
 // TODO Refactor JS code and rename functions - i.e. the displayRequiredField function should be renamed displayErrorMessage function
