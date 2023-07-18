@@ -163,8 +163,8 @@ hr {
     }
 
     .field-error {
-        position: absolute;
-        top: 39%;
+        position: relative;
+        top: 4%;
     }
 
     .birth-data {
