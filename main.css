@@ -139,19 +139,32 @@ hr {
     h1 {
         font-size: 50px;
     }
-    
-    .container {
-        width: 300px;
-        height: 450px;
-        border-bottom-right-radius: 100px;
+
+    span {
+        font-size: 9px;
     }
 
     hr {
         width: 270px;
     }
 
+    .container {
+        width: 300px;
+        height: 450px;
+        border-bottom-right-radius: 100px;
+        padding-left: 25px;
+    }
+
+    .divider {
+        margin-top: -150px;
+    }
     .main-inputs {
         column-gap: 2px;
+    }
+
+    .field-error {
+        position: absolute;
+        top: 39%;
     }
 
     .birth-data {
