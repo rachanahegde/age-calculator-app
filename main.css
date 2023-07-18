@@ -81,6 +81,17 @@ hr {
     padding-left: 15px;
 }
 
+/* Errors */
+.empty-error {
+    outline: 1px solid hsl(0, 100%, 67%); 
+}
+
+.field-error {
+    display: block;
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
 /* Divider */
 .divider {
     display: flex;
@@ -124,16 +135,6 @@ hr {
     padding-right: 10px;
 }
 
-/* Errors */
-.empty-error {
-    outline: 1px solid hsl(0, 100%, 67%); 
-}
-
-.field-error {
-    position: absolute;
-    top: 41%;
-}
-
 /* Media Queries */
 @media all and (max-width: 520px) {
     h1 {
@@ -158,13 +159,9 @@ hr {
     .divider {
         margin-top: -150px;
     }
+
     .main-inputs {
         column-gap: 2px;
-    }
-
-    .field-error {
-        position: relative;
-        top: 4%;
     }
 
     .birth-data {
