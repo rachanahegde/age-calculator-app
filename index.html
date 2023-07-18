@@ -12,36 +12,39 @@
       <!-- Input birth date -->
         <div class="main-inputs"> 
           <div class="individual-input">
-            <p>Day</p>
-            <input type=text name='day' placeholder="DD" class="birth-data">
+            <p id="day-descrip">Day</p>
+            <input type=text name='day' placeholder="DD" class="birth-data" id="day">
+            <span class="field-error" id="day-error"> </span> 
           </div>
           <div class="individual-input">
-            <p>Month</p>
-            <input type=text name='month' placeholder="MM" class="birth-data">
+            <p id="month-descrip">Month</p>
+            <input type=text name='month' placeholder="MM" class="birth-data" id="month">
+            <span class="field-error" id="month-error"> </span> 
           </div>
           <div class="individual-input">
-            <p>Year</p>
-            <input type=text name='year' placeholder="YYYY" class="birth-data">
+            <p id="year-descrip">Year</p>
+            <input type=text name='year' placeholder="YYYY" class="birth-data" id="year">
+            <span class="field-error" id="year-error"> </span> 
           </div>
         </div>
         <div class="divider">
           <hr>
-          <div id="down-arrow" >
+          <div id="down-arrow">
             <img src="/assets/images/icon-arrow.svg" alt="">
           </div>   
         </div>   
       <!-- Display age based on inputted date -->
       <div class="results-container">
         <div class="individual-result">
-          <h1 class="results-number"> - - </h1> 
+          <h1 class="results-number" id="result-years"> - - </h1> 
           <h1 class="results-text"> years</h1>
         </div>
         <div class="individual-result">
-          <h1 class="results-number"> - - </h1> 
+          <h1 class="results-number" id="result-months"> - - </h1> 
           <h1 class="results-text"> months</h1>
         </div>
         <div class="individual-result">
-          <h1 class="results-number"> - - </h1> 
+          <h1 class="results-number" id="result-days"> - - </h1> 
           <h1 class="results-text"> days</h1>
         </div>
       </div>
