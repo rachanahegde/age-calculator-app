@@ -80,8 +80,13 @@ function displayAge() {
   // Check if date is valid
   if (day !== "" && month !== "" && year !== "") {
     if (0 < day < 32 && 0 < month < 13 && year <= 2023) {
+      // TODO check if user has entered a leading zero like "04" because this gets turned into "004" with the conditional operators below!
+
       day = Number(day) < 10 ? "0" + day : day;
       month = Number(month) < 10 ? "0" + month : month;
+
+      // TODO log the value of day and month variables to the console to check it's correct
+
       const dateString = `${year}-${month}-${day}`;
       const date = moment(dateString, "YYYY-MM-DD", true);
       if (!date.isValid()) {
@@ -121,3 +126,7 @@ function displayAge() {
     }
   }
 }
+
+// TODO Fix error caused by user entering "01" into the month or day field
+// TODO Fix the -7 that results when dad enters his birth date - june 25 1972
+// TODO Make sure variations of mom's birth date work - april
