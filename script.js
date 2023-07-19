@@ -29,11 +29,6 @@ function displayAge() {
   let month = document.getElementById("month").value;
   const year = document.getElementById("year").value;
 
-  // TODO - These variables are never used ---- delete them ?
-  // const currentYear = new Date().getFullYear();
-  // const currentMonth = new Date().getMonth() + 1; // Get the current month (returns a value from 0 to 11)
-  // const currentDay = new Date().getDate();
-
   // Receive validation errors if any field is empty when the form is submitted
   if (!day || !month || !year) {
     if (!day) {
@@ -94,11 +89,9 @@ function displayAge() {
 
         // Display age
       } else {
-        // TODO uncomment the below line
-        // const birthDate = new Date(`${year}-${month}-${day}`); // Convert birthdate to Date object
-        const birthDate = new Date("1972-06-25"); // FOR TESTING
+        const birthDate = new Date(`${year}-${month}-${day}`); // Convert birthdate to Date object
 
-        const today = new Date(); // New Date object representing current date and time
+        const today = new Date(); // Date object representing current date and time
 
         // Calculate age in years, months, and days
         let ageYears = today.getFullYear() - birthDate.getFullYear();
@@ -106,27 +99,28 @@ function displayAge() {
         let ageDays = today.getDate() - birthDate.getDate();
 
         // Handle cases where birthday hasn't occurred in current year or current month
-        if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
+        if (
+          ageMonths < 0 ||
+          (ageMonths === 0 && today.getDate() < birthDate.getDate())
+        ) {
           ageYears--;
           ageMonths += 12;
+        }
+
+        // Handle case where birth date day value is greater than the current day
+        if (ageDays < 0) {
           const prevMonthDate = new Date(
             today.getFullYear(),
             today.getMonth() - 1,
             1
           );
-
-          // Calculate number of days in previous month
           const prevMonthDays = new Date(
             prevMonthDate.getFullYear(),
             prevMonthDate.getMonth() + 1,
             0
           ).getDate();
-
-          // Check if ageDays value is greater than current day value. If greater, subtract 1 from ageMonths and add number of days in previous month to ageDays
-          if (ageDays < 0) {
-            ageDays += prevMonthDays;
-            ageMonths--;
-          }
+          ageDays += prevMonthDays;
+          ageMonths--;
         }
 
         resultDays.textContent = ageDays;
@@ -136,5 +130,3 @@ function displayAge() {
     }
   }
 }
-
-// TODO Fix the -7 that results when dad enters his birth date - june 25 1972
