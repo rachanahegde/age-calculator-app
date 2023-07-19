@@ -29,9 +29,10 @@ function displayAge() {
   let month = document.getElementById("month").value;
   const year = document.getElementById("year").value;
 
-  const currentYear = new Date().getFullYear();
-  const currentMonth = new Date().getMonth() + 1; // Get the current month (returns a value from 0 to 11)
-  const currentDay = new Date().getDate();
+  // TODO - These variables are never used ---- delete them ?
+  // const currentYear = new Date().getFullYear();
+  // const currentMonth = new Date().getMonth() + 1; // Get the current month (returns a value from 0 to 11)
+  // const currentDay = new Date().getDate();
 
   // Receive validation errors if any field is empty when the form is submitted
   if (!day || !month || !year) {
@@ -80,12 +81,9 @@ function displayAge() {
   // Check if date is valid
   if (day !== "" && month !== "" && year !== "") {
     if (0 < day < 32 && 0 < month < 13 && year <= 2023) {
-      // TODO check if user has entered a leading zero like "04" because this gets turned into "004" with the conditional operators below!
-
-      day = Number(day) < 10 ? "0" + day : day;
-      month = Number(month) < 10 ? "0" + month : month;
-
-      // TODO log the value of day and month variables to the console to check it's correct
+      // Check if user has entered a leading zero before modifying the day and month strings
+      day = Number(day) < 10 && day[0] !== "0" ? "0" + day : day;
+      month = Number(month) < 10 && month[0] !== "0" ? "0" + month : month;
 
       const dateString = `${year}-${month}-${day}`;
       const date = moment(dateString, "YYYY-MM-DD", true);
@@ -96,7 +94,10 @@ function displayAge() {
 
         // Display age
       } else {
-        const birthDate = new Date(`${year}-${month}-${day}`); // Convert birthdate to Date object
+        // TODO uncomment the below line
+        // const birthDate = new Date(`${year}-${month}-${day}`); // Convert birthdate to Date object
+        const birthDate = new Date("1972-06-25"); // FOR TESTING
+
         const today = new Date(); // New Date object representing current date and time
 
         // Calculate age in years, months, and days
@@ -104,18 +105,27 @@ function displayAge() {
         let ageMonths = today.getMonth() - birthDate.getMonth();
         let ageDays = today.getDate() - birthDate.getDate();
 
-        // Handle cases where birthday hasn't occured in current year or current month
+        // Handle cases where birthday hasn't occurred in current year or current month
         if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
           ageYears--;
           ageMonths += 12;
-          // Get number of days in the previous month and add to ageDays
+          const prevMonthDate = new Date(
+            today.getFullYear(),
+            today.getMonth() - 1,
+            1
+          );
+
+          // Calculate number of days in previous month
+          const prevMonthDays = new Date(
+            prevMonthDate.getFullYear(),
+            prevMonthDate.getMonth() + 1,
+            0
+          ).getDate();
+
+          // Check if ageDays value is greater than current day value. If greater, subtract 1 from ageMonths and add number of days in previous month to ageDays
           if (ageDays < 0) {
+            ageDays += prevMonthDays;
             ageMonths--;
-            ageDays += new Date(
-              today.getFullYear(),
-              today.getMonth(),
-              0
-            ).getDate();
           }
         }
 
@@ -127,6 +137,4 @@ function displayAge() {
   }
 }
 
-// TODO Fix error caused by user entering "01" into the month or day field
 // TODO Fix the -7 that results when dad enters his birth date - june 25 1972
-// TODO Make sure variations of mom's birth date work - april
