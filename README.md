@@ -38,7 +38,7 @@ Users should be able to:
 
 ## My process
 
-### Built with
+### Built with:
 
 - Flexbox
 - CSS Grid
