@@ -30,9 +30,9 @@ Users should be able to:
 
 ### Screenshots - Mobile
 
-![](/screenshots/age-calculator-mobile.png)
+![](/screenshots/age-calculator-mobile.PNG)
 
-![](/screenshots/age-calculator-mobile-error.png)
+![](/screenshots/age-calculator-mobile-error.PNG)
 
 ### Links
 
