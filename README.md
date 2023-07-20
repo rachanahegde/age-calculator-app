@@ -22,9 +22,17 @@ Users should be able to:
 
 ### Screenshots - Desktop
 
-![](order-summary-component-screenshot.png)
+![](/screenshots/age-calculator-desktop.png)
+
+![](/screenshots/age-calculator-desktop-error-1.png)
+
+![](/screenshots/age-calculator-desktop-error-2.png)
 
 ### Screenshots - Mobile
+
+![](/screenshots/age-calculator-mobile.png)
+
+![](/screenshots/age-calculator-mobile-error.png)
 
 ### Links
 
