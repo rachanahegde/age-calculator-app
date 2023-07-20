@@ -1,6 +1,6 @@
 # Age Calculator App
 
-This age calculator app was built using HTML, CSS, and vanilla JS. The design for this app was provided by [Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q)].
+This age calculator app was built using HTML, CSS, and vanilla JS. The design for this app was provided by [Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q)).
 
 ## Overview
 
