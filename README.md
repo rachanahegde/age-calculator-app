@@ -22,17 +22,17 @@ Users should be able to:
 
 ### Screenshots - Desktop
 
-<img src="/screenshots/age-calculator-desktop.png" width="550"/>
+<img src="/screenshots/age-calculator-desktop.png" width="600"/>
 
-![](/screenshots/age-calculator-desktop-error-1.png)
+<img src="/screenshots/age-calculator-desktop-error-1.png" width="600"/>
 
-![](/screenshots/age-calculator-desktop-error-2.png)
+<img src="/screenshots/age-calculator-desktop-error-2.png" width="600"/>
 
 ### Screenshots - Mobile
 
-![](/screenshots/age-calculator-mobile.PNG)
+<img src="/screenshots/age-calculator-mobile.PNG" width="400"/>
 
-![](/screenshots/age-calculator-mobile-error.PNG)
+<img src="/screenshots/age-calculator-mobile-error.PNG" width="400"/>
 
 ### Links
 
