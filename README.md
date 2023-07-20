@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshots - Desktop
 
-<img src="/screenshots/age-calculator-desktop.png" width="400"/>
+<img src="/screenshots/age-calculator-desktop.png" width="200"/>
 
 ![](/screenshots/age-calculator-desktop-error-1.png)
 
